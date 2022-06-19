@@ -26,6 +26,7 @@ namespace hw3._4
                     {
                         sum += array[i];
                     }
+                    
                     Console.WriteLine(sum);
                 }
 
