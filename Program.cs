@@ -28,13 +28,9 @@ namespace hw3._5
 
             Console.WriteLine();
 
-            for (int j = 0; j < array.Length; j++)
+            for (int j = 0; j <= array.Length - 1; j++)
             {
-                if (j == array.Length - 1)
-                {
-                    break;
-                }
-                else if (array[j] == array[j + 1])
+                if (array[j] == array[j + 1])
                 {
                     repeat++;
                 }
