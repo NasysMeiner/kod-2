@@ -11,14 +11,14 @@ namespace hw4._3
         static void Main(string[] args)
         {
             bool success = false;
-            int number = Convert(ref success);
+            int number = GetNumber(ref success);
 
             Console.Clear();
             Console.WriteLine($"Вы ввели {number}"); 
             Console.ReadLine();
         }
 
-        static int Convert(ref bool success)
+        static int GetNumber(ref bool success)
         {
             bool isWork = true;
             
