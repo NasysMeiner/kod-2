@@ -43,21 +43,7 @@ namespace hw7._3
                 Console.WriteLine("Меню\n1 - отсортировать список по ФИО.\n2 - отсортировать по возрасту\n3 - вывести больных с кокретным заболеванием.");
                 userInput = Console.ReadLine();
                 Console.Clear();
-
-                if(int.TryParse(userInput, out int input))
-
-                switch (input)
-                {
-                    case 1:
-                        SortName();
-                        break;
-                    case 2:
-                        SortAge();
-                        break;
-                    case 3:
-                        ShowDisease();
-                        break;
-                }                   
+                SelectItem(userInput);                        
             }
         }
 
@@ -70,6 +56,29 @@ namespace hw7._3
                 Console.SetCursorPosition(80, positionY);
                 Console.WriteLine($"{patient.Name} - {patient.Age} лет, болен:{patient.Disease}.");
                 positionY++;
+            }
+        }
+
+        private void SelectItem(string userInput)
+        {
+            if (int.TryParse(userInput, out int input))
+            {
+                switch (input)
+                {
+                    case 1:
+                        SortName();
+                        break;
+                    case 2:
+                        SortAge();
+                        break;
+                    case 3:
+                        ShowDisease();
+                        break;
+                }
+            }
+            else
+            {
+                Console.WriteLine("Некорректный ввод.");
             }
         }
 
